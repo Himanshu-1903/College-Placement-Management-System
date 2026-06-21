@@ -9,6 +9,9 @@ const PORT = process.env.PORT || 4518;
 app.use(cors());
 app.use(express.json());
 
+const authRoutes = require('./routes/auth.route');
+app.use('/auth', authRoutes);
+
 connectDB();
 
 app.get('/', (req, res) => {
