@@ -5,7 +5,18 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        scrollUp: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(-100%)' },
+        },
+      },
+      animation: {
+        scrollUp: 'scrollUp 10s linear infinite',
+      },
+    },
   },
   plugins: [],
 }
+
